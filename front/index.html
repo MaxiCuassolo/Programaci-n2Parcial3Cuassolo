@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pádel El Rebote - Gestión de Reservas</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+    <header class="encabezado">
+        <h1> Pádel El Rebote</h1>
+        <p>Sistema de mostrador y gestión de turnos</p>
+    </header>
+
+    <nav class="navegacion">
+        <a href="#reservar">Reservar Cancha</a>
+        <a href="#reservas">Listado de Reservas</a>
+        <a href="#recaudacion">Recaudación</a>
+    </nav>
+
+    <main class="principal">
+
+        <div class="fila">
+
+            
+            <section id="reservar" class="seccion">
+                <h2>Nueva reserva</h2>
+
+                <form id="formReserva" class="formulario">
+                    <label for="cliente">Cliente</label>
+                    <input type="text" id="cliente" maxlength="100" placeholder="Ej: Martín López" required>
+
+                    <label for="cancha">Cancha</label>
+                    <select id="cancha" required>
+                        <option value="">Cargando canchas...</option>
+                    </select>
+
+                    <label for="fecha">Fecha</label>
+                    <input type="date" id="fecha" required>
+
+                    <label for="hora">Hora (HH:mm)</label>
+                    <input type="text" id="hora" placeholder="18:00" maxlength="5" required>
+
+                    <button type="submit">Confirmar reserva</button>
+                </form>
+
+                <p id="mensaje" class="mensaje"></p>
+            </section>
+
+            
+            <section id="recaudacion" class="seccion">
+                <h2>Recaudación por cancha</h2>
+                <table class="tabla" id="tablaRecaudacion">
+                    <thead>
+                        <tr>
+                            <th>Cancha</th>
+                            <th>Reservas</th>
+                            <th>Cobrado</th>
+                            <th>Pendiente</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </section>
+
+        </div>
+
+        
+        <section id="reservas" class="seccion-ancho">
+            <h2>Reservas registradas</h2>
+            <div id="listadoReservas" class="tarjetas-grid">
+                <p class="sin-resultados">Cargando reservas...</p>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>

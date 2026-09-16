@@ -1,0 +1,260 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background-color: #f4f6f8;
+    color: #2d3436;
+}
+
+
+.encabezado {
+    background-color: #1b5e20;
+    color: #ffffff;
+    text-align: center;
+    padding: 24px 16px;
+}
+
+.encabezado p {
+    opacity: 0.9;
+    margin-top: 6px;
+}
+
+.navegacion {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    background-color: #0d3813;
+    padding: 12px;
+}
+
+.navegacion a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.navegacion a:hover {
+    text-decoration: underline;
+}
+
+.principal {
+    max-width: 1100px;
+    margin: 24px auto;
+    padding: 0 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+.fila {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    align-items: flex-start;
+}
+
+.seccion {
+    flex: 1 1 450px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    padding: 22px;
+}
+
+.seccion-ancho {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    padding: 22px;
+}
+
+h2 {
+    font-size: 1.25rem;
+    color: #1b5e20;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 8px;
+    margin-bottom: 16px;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.formulario label {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #444;
+}
+
+.formulario input,
+.formulario select {
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 0.95rem;
+}
+
+.formulario input:focus,
+.formulario select:focus {
+    outline: none;
+    border-color: #1b5e20;
+}
+
+.formulario button {
+    background-color: #1b5e20;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    padding: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 8px;
+    transition: background-color 0.2s;
+}
+
+.formulario button:hover {
+    background-color: #2e7d32;
+}
+
+.mensaje {
+    margin-top: 14px;
+    padding: 10px 14px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    display: none;
+}
+
+.mensaje.ok {
+    display: block;
+    background-color: #e8f5e9;
+    color: #2e7d32;
+    border: 1px solid #a5d6a7;
+}
+
+.mensaje.error {
+    display: block;
+    background-color: #ffebee;
+    color: #c62828;
+    border: 1px solid #ef9a9a;
+}
+
+.tabla {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.92rem;
+}
+
+.tabla th,
+.tabla td {
+    padding: 10px 12px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+.tabla th {
+    background-color: #f1f8e9;
+    color: #1b5e20;
+    font-weight: 600;
+}
+
+.tabla .numero {
+    text-align: right;
+}
+
+.tabla .rojo {
+    color: #c62828;
+    font-weight: 700;
+}
+
+.tarjetas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 16px;
+    margin-top: 12px;
+}
+
+.tarjeta-reserva {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.tarjeta-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tarjeta-cliente {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #2d3436;
+}
+
+.tarjeta-cancha {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.tarjeta-horario {
+    font-size: 0.88rem;
+    color: #777;
+}
+
+.chip {
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 4px 8px;
+    border-radius: 12px;
+    text-transform: uppercase;
+}
+
+.chip.pagada {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+    border: 1px solid #a5d6a7;
+}
+
+.chip.pendiente {
+    background-color: #fff3e0;
+    color: #ef6c00;
+    border: 1px solid #ffcc80;
+}
+
+.btn-pagar {
+    background-color: #0288d1;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 12px;
+    font-size: 0.88rem;
+    font-weight: 600;
+    cursor: pointer;
+    align-self: flex-start;
+    transition: background-color 0.2s;
+}
+
+.btn-pagar:hover {
+    background-color: #0277bd;
+}
+
+.sin-resultados {
+    color: #888;
+    font-style: italic;
+    padding: 12px;
+}
